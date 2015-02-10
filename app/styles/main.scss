@@ -1,0 +1,140 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300&subset=latin,latin-ext);
+
+
+$light-green: #82cec1;
+$green: #00ab4e;
+$blue: #00b7de;
+$purple: #672f87;
+$yellow: #ffc222;
+$pink: #d15980;
+
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.LandscapeModeOnly {
+  display: none;
+}
+/* Space out content a bit */
+html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  &.landscape {
+    background: #006f66;
+    section, section > *, .nav-pills {
+      display: none !important;
+    }
+    .LandscapeModeOnly {
+      display: block;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      img {
+        
+      }
+    }
+
+  }
+
+}
+
+section, .section {
+  clear:both; height:100%; width:100%;
+  position: relative;
+}
+
+.big-title {
+  font-size: 120px;
+  color: $green;
+  padding: 10% 0px;
+}
+.btn-green {
+  background: $green;
+  color: #FFF;
+  font-size: 36px;
+}
+.nav.nav-pills {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px;
+  li.active > a, li.active > a:hover, li.active > a:focus {
+    background-color: none;
+  }
+  li > a {
+    color: #ffffff;
+    font-size: 3.2vw;
+    border-radius: 0px;
+  }
+  li:nth-child(1) {
+    background: #fff;
+  }
+  li:nth-child(2) {
+    background: $light-green;
+  }
+  li:nth-child(3) {
+    background: $blue;
+  }
+  li:nth-child(4) {
+    background: $purple;
+  }
+  li:nth-child(5) {
+    background: $yellow;
+  }
+  li:nth-child(6) {
+    background: $pink;
+  }
+}
+
+.bck-green {
+  background: $green;
+}
+.bck-blue {
+  background: $blue;
+}
+.bck-yellow {
+  background: $yellow;
+}
+.bck-purple {
+  background: $purple;
+}
+.bck-pink {
+  background: $pink;
+}
+.bck-lightgreen {
+  background: $light-green;
+}
+
+//Animation
+.step.ng-enter,
+.step.ng-leave {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.step.ng-enter {
+  left: 100%;
+}
+.step.ng-enter-active {
+  left: 0;
+  z-index: 999;
+}
+.step.ng-leave {
+  left: 0;
+}
+.step.ng-leave-active {
+  left: -100%;
+}

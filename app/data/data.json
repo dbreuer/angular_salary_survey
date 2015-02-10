@@ -1,0 +1,38 @@
+{
+    "firstSession": {
+        "averageBasic": {
+            "fmaat": {
+                "num": 247,
+                "mean": 36913,
+                "median": 33500
+            },
+            "maat": {
+                "num": 1973,
+                "mean": 24534,
+                "median": 23000
+            },
+            "affiliate": {
+                "num": 445,
+                "mean": 19458,
+                "median": 19000
+            },
+            "level4": {
+                "num": 607,
+                "mean": 18407,
+                "median": 18000
+            },
+            "level3": {
+                "num": 473,
+                "mean": 17595,
+                "median": 16000
+            },
+            "level2": {
+                "num": 342,
+                "mean": 16392,
+                "median": 15880
+            }
+        }
+    },
+    "second_session": {},
+    "third_session": {}
+}
