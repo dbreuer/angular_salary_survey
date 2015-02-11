@@ -29,9 +29,7 @@ angular
             });
   });
 
-
-window.addEventListener('resize', function() {
-    // Get screen size (inner/outerWidth, inner/outerHeight)
+function orientationCheck() {
     var height = $(window).height();
     var width = $(window).width();
 
@@ -41,4 +39,6 @@ window.addEventListener('resize', function() {
     } else {
         $('body').removeClass('landscape');
     }
-}, false);
+}
+window.addEventListener('resize', orientationCheck, false);
+window.onload = orientationCheck;
