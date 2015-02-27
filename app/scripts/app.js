@@ -18,15 +18,7 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider, $locationProvider) {
-        $routeProvider
-            .when('/steps/:templateID', {
-                controller: 'MainCtrl',
-                templateUrl: function($routeParams) {
-                    return 'views/step' + $routeParams.templateID + '.html';
-                }
-            }).otherwise({
-             redirectTo: '/steps/0'
-            });
+
   });
 
 function orientationCheck() {

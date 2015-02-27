@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularTestApp">
+  <body ng-app="angularTestApp" ng-controller="MainCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -27,15 +27,24 @@
     <div class="LandscapeModeOnly">
         <img src="images/rotate-device.png" alt="Please rotate your device" class="" />
     </div>
-      <div ng-view="" class="section step"></div>
+    <div class="narration">
+        <button class="btn btn-primary"><i class="fa fa-play"></i></button>
+        <button class="btn btn-primary"><i class="fa fa-volume-up"></i></button>
+    </div>
+
+    <div class="section step">
+      <div  class="section step"  ng-repeat="section in sections" ng-show="section.id == id">
+          <div class="section step" ng-include="section.template"  ></div>
+      </div>
+    </div>
 
     <ul class="nav nav-pills" ng-show="navigation">
-        <li role="presentation" class="active text-white"><a href="#/steps/0">Start</a></li>
-        <li role="presentation"><a href="#/steps/1">Salary</a></li>
-        <li role="presentation"><a href="#/steps/2">Region</a></li>
-        <li role="presentation"><a href="#/steps/3">Bonus</a></li>
-        <li role="presentation"><a href="#/steps/4">Sector</a></li>
-        <li role="presentation"><a href="#/steps/5">Benefits</a></li>
+        <li role="presentation" class="active text-white"><a href="#">Start</a></li>
+        <li role="presentation"><a ng-click="nextId(1)" href="#">Salary</a></li>
+        <li role="presentation"><a ng-click="nextId(2)" href="#">Region</a></li>
+        <li role="presentation"><a ng-click="nextId(3)" href="#">Bonus</a></li>
+        <li role="presentation"><a ng-click="nextId(4)" href="#">Sector</a></li>
+        <li role="presentation"><a ng-click="nextId(5)" href="#">Benefits</a></li>
     </ul>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

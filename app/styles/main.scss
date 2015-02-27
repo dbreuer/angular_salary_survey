@@ -129,7 +129,7 @@ section, .section {
 }
 
 .fa-big {
-  font-size: 8vw;
+  font-size: 5vw;
   letter-spacing: 1em;
 }
 .fa-big:last-child {
@@ -174,27 +174,53 @@ section, .section {
 .color-lightgreen {
   color: $light-green;
 }
-
+//Narration
+.btn {
+  border-radius: 0px;
+}
+.narration {
+  position: fixed;top: 0px;right: 0px;
+  z-index: 999;
+  width: 15vw;
+  height: 4vw;
+  padding: 0.5vw;
+//  background: rgba(0, 171, 78,0.6);
+}
+.landscape {
+  .narration {
+    display: none;
+  }
+}
 //Animation
 .step.ng-enter,
 .step.ng-leave {
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  position: absolute;top: 0px; left: 0px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .step.ng-enter {
-  left: 100%;
+  z-index: 99;
+  opacity: 1;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 .step.ng-enter-active {
-  left: 0;
-  z-index: 999;
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transform: scale(1);
 }
 .step.ng-leave {
-  left: 0;
+  z-index: 9;
+  opacity: 0.2;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
 }
 .step.ng-leave-active {
-  left: -100%;
+  opacity: 0.2;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
 }
 
 @media(min-width: 768px){
